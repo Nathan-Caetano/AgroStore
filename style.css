@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --font--color--blue: rgba(91, 202, 0, 0.829);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.header-inner-content{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+    background-color: #2c2c2c;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px #2c2c2c;
+    z-index: 99;
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    user-select: none;
+}
+
+.logo>span{
+    color: var(--font--color--blue);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-icon-container{
+    display: flex;
+}
+
+.nav-icon-container img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.nav-icon-container img:first-child{
+    margin-right: 1rem;
+}
+
+nav ul li{
+    color: #fff;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+nav ul li:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.menu-buttom{
+    display: none;
+}
+
+header{
+    background-image: repeating-linear-gradient(#fff, #c7c7c7);
+}
+
+.header-bottom-side-left>p{
+    font-size: small;
+}
+
+.header-bottom-side-left>p>span{
+    color: var(--font--color--blue);
+    font-weight: bold;
+}
+
+.header-bottom-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;  
+}
+
+.header-bottom-side-left{
+    height: 100%;
+    flex-basis: 50%;
+}
+
+.header-bottom-side-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left button{
+    background-color: var(--font--color--blue);
+    color: #fff;
+    border: 0;
+    padding: 0.8rem 3.8rem;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+.header-bottom-side-left button:hover{
+    background-color: rgba(67, 148, 0, 0.829);
+    transition: 0.5s;
+}
+
+.header-bottom-side-right{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+¨.header-bottom-side-right img{
+    width: 150%; 
+    transform: translateX(-50px);
+}
+
+/* Media Queries */
+
+@media (max-width: 800px){
+
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .menu-buttom{
+        display: block;
+    }
+
+    .header-bottom-side-left h2{
+        font-size: 2rem;
+    }
+
+    .header-bottom-side-left button{
+        font-size: smaller;
+    }
+
+    .header-bottom-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .header-bottom-side-right img{
+        width: 100%;
+    }
+
+    nav{
+        position: absolute;
+        background-color: #2c2c2c;
+        width: 100%;
+        top: 46px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .show-menu nav{
+        max-height: 300px;
+    }
+}
+
+/* Header */
+
+/* Main */
+
+.gray-backgroud{
+    background-color: #2c2c2c;
+}
+
+.page-inner-content{
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.page-inner-content img{
+    margin: 30px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    filter: brightness(40%);
+    transition: all 0.2s;
+}
+
+.page-inner-content img:hover{
+    filter: brightness(100%);
+    scale: 1.08;
+    transition: all 0.2s;
+}
+
+@media (max-width: 800px){
+    
+    .page-inner-content{
+        flex-direction: column;
+    }
+
+    .page-inner-content img{
+        width: 600px;
+    }
+}
