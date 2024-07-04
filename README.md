@@ -1,4 +1,4 @@
-# AgroStor
+# AgroStore
 
 MarcketPlace (não funcional) totalmente responsivo.
 
